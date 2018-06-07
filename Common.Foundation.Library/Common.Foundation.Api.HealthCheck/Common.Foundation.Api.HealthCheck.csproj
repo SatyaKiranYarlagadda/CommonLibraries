@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="src\Microsoft.AspNetCore.HealthChecks\bin\**" />
+    <Compile Remove="src\Microsoft.AspNetCore.HealthChecks\obj\**" />
+    <Compile Remove="src\Microsoft.Extensions.HealthChecks.SqlServer\bin\**" />
+    <Compile Remove="src\Microsoft.Extensions.HealthChecks.SqlServer\obj\**" />
+    <Compile Remove="src\Microsoft.Extensions.HealthChecks\bin\**" />
+    <Compile Remove="src\Microsoft.Extensions.HealthChecks\obj\**" />
+    <EmbeddedResource Remove="src\Microsoft.AspNetCore.HealthChecks\bin\**" />
+    <EmbeddedResource Remove="src\Microsoft.AspNetCore.HealthChecks\obj\**" />
+    <EmbeddedResource Remove="src\Microsoft.Extensions.HealthChecks.SqlServer\bin\**" />
+    <EmbeddedResource Remove="src\Microsoft.Extensions.HealthChecks.SqlServer\obj\**" />
+    <EmbeddedResource Remove="src\Microsoft.Extensions.HealthChecks\bin\**" />
+    <EmbeddedResource Remove="src\Microsoft.Extensions.HealthChecks\obj\**" />
+    <None Remove="src\Microsoft.AspNetCore.HealthChecks\bin\**" />
+    <None Remove="src\Microsoft.AspNetCore.HealthChecks\obj\**" />
+    <None Remove="src\Microsoft.Extensions.HealthChecks.SqlServer\bin\**" />
+    <None Remove="src\Microsoft.Extensions.HealthChecks.SqlServer\obj\**" />
+    <None Remove="src\Microsoft.Extensions.HealthChecks\bin\**" />
+    <None Remove="src\Microsoft.Extensions.HealthChecks\obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Common.Foundation.ExceptionHandling</id>
+    <version>1.0.0</version>
+    <title>Common.Foundation.ExceptionHandling</title>
+    <authors></authors>
+    <owners></owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common library that provides application exceptions and API exceptions.</description>
+    <releaseNotes>First release</releaseNotes>
+    <copyright></copyright>
+    <tags>ExceptionHandling</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\Common.Foundation.ExceptionHandling.dll" target="lib\netstandard2.0\Common.Foundation.ExceptionHandling.dll" />
+  </files>
+</package>

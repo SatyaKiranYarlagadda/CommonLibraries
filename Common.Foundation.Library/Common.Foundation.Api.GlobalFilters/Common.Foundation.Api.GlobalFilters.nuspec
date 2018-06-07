@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Common.Foundation.Api.GlobalFilters</id>
+    <version>1.0.0</version>
+    <title>Common.Foundation.Api.GlobalFilters</title>
+    <authors></authors>
+    <owners></owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common library that provides global filters for the AspNet APIs.</description>
+    <releaseNotes>First release</releaseNotes>
+    <copyright></copyright>
+    <tags>GlobalFilters</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\Common.Foundation.Api.GlobalFilters.dll" target="lib\netstandard2.0\Common.Foundation.Api.GlobalFilters.dll" />
+  </files>
+</package>
+

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Common.Foundation.ResponseObjects</id>
+    <version>1.0.1</version>
+    <title>Common.Foundation.ResponseObjects</title>
+    <authors></authors>
+    <owners></owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common library that provides interfaces and base classes for API response objects.</description>
+    <releaseNotes>First release</releaseNotes>
+    <copyright></copyright>
+    <tags>ResponseObjects</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\Common.Foundation.ResponseObjects.dll" target="lib\netstandard2.0\Common.Foundation.ResponseObjects.dll" />
+  </files>
+</package>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Common.Foundation.Api.Http</id>
+    <version>1.0.0</version>
+    <title>Common.Foundation.Api.Http</title>
+    <authors></authors>
+    <owners></owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common library that provides HTTP client factory extensions with built in resilience for the AspNet APIs.</description>
+    <releaseNotes>First release</releaseNotes>
+    <copyright></copyright>
+    <tags>Http</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\Common.Foundation.Api.Http.dll" target="lib\netstandard2.0\Common.Foundation.Api.Http.dll" />
+  </files>
+</package>
+
