@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Foundation.Api.Globa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Foundation.Api.Behaviors", "Common.Foundation.Api.Behaviors\Common.Foundation.Api.Behaviors.csproj", "{572FCB04-C773-47D8-8AC7-48CD1B7B274B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Foundation.Api.Logging", "Common.Foundation.Api.Logging\Common.Foundation.Api.Logging.csproj", "{E0602E3F-C4AE-4542-B18E-EFECD68284CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Foundation.DomainModel", "Common.Foundation.DomainModel\Common.Foundation.DomainModel.csproj", "{13DC375D-D1C6-4473-8C76-FBAD68A6343F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{572FCB04-C773-47D8-8AC7-48CD1B7B274B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{572FCB04-C773-47D8-8AC7-48CD1B7B274B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{572FCB04-C773-47D8-8AC7-48CD1B7B274B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0602E3F-C4AE-4542-B18E-EFECD68284CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0602E3F-C4AE-4542-B18E-EFECD68284CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0602E3F-C4AE-4542-B18E-EFECD68284CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0602E3F-C4AE-4542-B18E-EFECD68284CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13DC375D-D1C6-4473-8C76-FBAD68A6343F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13DC375D-D1C6-4473-8C76-FBAD68A6343F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13DC375D-D1C6-4473-8C76-FBAD68A6343F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13DC375D-D1C6-4473-8C76-FBAD68A6343F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

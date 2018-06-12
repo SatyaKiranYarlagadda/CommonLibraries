@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Common.Foundation.Api.Logging</id>
+    <version>1.0.0</version>
+    <title>Common.Foundation.Api.Logging</title>
+    <authors></authors>
+    <owners></owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common library that provides Logging context extensions for the AspNet APIs.</description>
+    <releaseNotes>First release</releaseNotes>
+    <copyright>Copyright 2018 (c)  Australia. All rights reserved.</copyright>
+    <tags>Logging</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\Common.Foundation.Api.Logging.dll" target="lib\netstandard2.0\Common.Foundation.Api.Logging.dll" />
+  </files>
+</package>
+

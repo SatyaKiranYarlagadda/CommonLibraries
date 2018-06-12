@@ -23,6 +23,7 @@ namespace Common.Foundation.Api.Http
                     durationOfBreak: TimeSpan.FromSeconds(30)
                 ))
                 .AddHttpMessageHandler<ResponseTimeHandler>()
+                .AddHttpMessageHandler<LoggingHandler>()
                 .AddHttpMessageHandler<DefaultRequestHeadersHandler>();
 
             return services;
@@ -42,6 +43,7 @@ namespace Common.Foundation.Api.Http
                     durationOfBreak: TimeSpan.FromSeconds(30)
                 ))
                 .AddHttpMessageHandler<ResponseTimeHandler>()
+                .AddHttpMessageHandler<LoggingHandler>()
                 .AddHttpMessageHandler<DefaultRequestHeadersHandler>();
 
             return services;
@@ -67,6 +69,7 @@ namespace Common.Foundation.Api.Http
                     durationOfBreak: TimeSpan.FromSeconds(30)
                 ))
                 .AddHttpMessageHandler<ResponseTimeHandler>()
+                .AddHttpMessageHandler<LoggingHandler>()
                 .AddHttpMessageHandler<DefaultRequestHeadersHandler>();
 
             return services;
@@ -92,6 +95,7 @@ namespace Common.Foundation.Api.Http
                     durationOfBreak: TimeSpan.FromSeconds(30)
                 ))
                 .AddHttpMessageHandler<ResponseTimeHandler>()
+                .AddHttpMessageHandler<LoggingHandler>()
                 .AddHttpMessageHandler<DefaultRequestHeadersHandler>();
 
             return services;
@@ -101,6 +105,7 @@ namespace Common.Foundation.Api.Http
         {
             services.AddHttpClient(clientName, clientBuilder)
                 .AddHttpMessageHandler<ResponseTimeHandler>()
+                .AddHttpMessageHandler<LoggingHandler>()
                 .AddHttpMessageHandler<DefaultRequestHeadersHandler>();
 
             return services;
@@ -110,6 +115,7 @@ namespace Common.Foundation.Api.Http
         {
             services.AddHttpClient<TClient>(clientName, clientBuilder)
                 .AddHttpMessageHandler<ResponseTimeHandler>()
+                .AddHttpMessageHandler<LoggingHandler>()
                 .AddHttpMessageHandler<DefaultRequestHeadersHandler>();
 
             return services;
