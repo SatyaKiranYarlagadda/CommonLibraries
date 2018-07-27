@@ -11,8 +11,6 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.8.1" />
     <PackageReference Include="FluentValidation" Version="7.6.0" />
-    <PackageReference Include="HCF.Common.Foundation.ExceptionHandling" Version="1.0.0" />
-    <PackageReference Include="HCF.Common.Foundation.ResponseObjects" Version="1.0.1" />
     <PackageReference Include="MediatR" Version="5.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
