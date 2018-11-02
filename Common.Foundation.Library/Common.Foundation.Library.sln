@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Foundation.Caching",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Foundation.Interceptors", "Common.Foundation.Interceptors\Common.Foundation.Interceptors.csproj", "{F85DC49A-7929-4264-A80B-61AFE68B0387}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Foundation.Repositories", "Common.Foundation.Repositories\Common.Foundation.Repositories.csproj", "{15CF2FF9-7E59-4B7B-A51F-4FDE13845AD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{F85DC49A-7929-4264-A80B-61AFE68B0387}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F85DC49A-7929-4264-A80B-61AFE68B0387}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F85DC49A-7929-4264-A80B-61AFE68B0387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15CF2FF9-7E59-4B7B-A51F-4FDE13845AD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15CF2FF9-7E59-4B7B-A51F-4FDE13845AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15CF2FF9-7E59-4B7B-A51F-4FDE13845AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15CF2FF9-7E59-4B7B-A51F-4FDE13845AD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
