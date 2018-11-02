@@ -3,8 +3,9 @@
 
 using System;
 using System.Collections.Generic;
+using Common.Foundation.Api.HealthCheck.common;
 
-namespace Microsoft.Extensions.HealthChecks
+namespace Common.Foundation.Api.HealthCheck.Microsoft.Extensions.HealthChecks
 {
     public class HealthCheckBuilder
     {

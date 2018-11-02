@@ -2,7 +2,7 @@
 using System.Net;
 using System.Runtime.Serialization;
 
-namespace Common.Foundation.ExceptionHandling
+namespace Common.Foundation.ExceptionHandling.Exceptions
 {
     public class DomainApiResultException<T> : DomainException<T> where T : class
     {

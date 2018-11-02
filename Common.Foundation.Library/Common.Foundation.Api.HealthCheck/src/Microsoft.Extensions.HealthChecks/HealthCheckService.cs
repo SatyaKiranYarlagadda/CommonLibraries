@@ -6,9 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Common.Foundation.Api.HealthCheck.common;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Microsoft.Extensions.HealthChecks
+namespace Common.Foundation.Api.HealthCheck.Microsoft.Extensions.HealthChecks
 {
     public class HealthCheckService : IHealthCheckService
     {

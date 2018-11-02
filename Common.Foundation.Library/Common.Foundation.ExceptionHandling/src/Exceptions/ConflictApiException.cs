@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Common.Foundation.ExceptionHandling.src.Exceptions
+namespace Common.Foundation.ExceptionHandling.Exceptions
 {
     public class ConflictApiException<T> : DomainApiResultException<T> where T : class
     {

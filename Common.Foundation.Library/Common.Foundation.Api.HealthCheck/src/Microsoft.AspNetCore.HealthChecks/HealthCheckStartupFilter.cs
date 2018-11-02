@@ -5,7 +5,7 @@ using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Microsoft.AspNetCore.HealthChecks
+namespace Common.Foundation.Api.HealthCheck.Microsoft.AspNetCore.HealthChecks
 {
     public class HealthCheckStartupFilter : IStartupFilter
     {

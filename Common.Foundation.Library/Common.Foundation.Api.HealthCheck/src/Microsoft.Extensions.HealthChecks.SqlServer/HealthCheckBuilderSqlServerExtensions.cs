@@ -4,8 +4,10 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using Common.Foundation.Api.HealthCheck.common;
+using Common.Foundation.Api.HealthCheck.Microsoft.Extensions.HealthChecks.Checks;
 
-namespace Microsoft.Extensions.HealthChecks
+namespace Common.Foundation.Api.HealthCheck.Microsoft.Extensions.HealthChecks.SqlServer
 {
     // REVIEW: What are the appropriate guards for these functions?
 

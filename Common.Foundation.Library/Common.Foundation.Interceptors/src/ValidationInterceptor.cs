@@ -3,10 +3,8 @@ using System.Linq;
 using Castle.DynamicProxy;
 using FluentValidation;
 using FluentValidation.Results;
-using HCF.Common.Foundation.ExceptionHandling;
-using HCF.Common.Foundation.ResponseObjects;
 
-namespace Common.Foundation.Interceptors.src
+namespace Common.Foundation.Interceptors
 {
     public class ValidationInterceptor : IInterceptor
     {

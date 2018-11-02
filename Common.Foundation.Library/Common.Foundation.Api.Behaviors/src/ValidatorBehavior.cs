@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
-using HCF.Common.Foundation.ExceptionHandling;
-using HCF.Common.Foundation.ResponseObjects;
+using Common.Foundation.ExceptionHandling;
+using Common.Foundation.ResponseObjects;
 using MediatR;
 using System.Linq;
 using System.Threading;

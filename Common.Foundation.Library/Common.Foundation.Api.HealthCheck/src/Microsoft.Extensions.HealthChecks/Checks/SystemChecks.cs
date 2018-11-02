@@ -4,7 +4,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Microsoft.Extensions.HealthChecks
+namespace Common.Foundation.Api.HealthCheck.Microsoft.Extensions.HealthChecks.Checks
 {
     public static partial class HealthCheckBuilderExtensions
     {

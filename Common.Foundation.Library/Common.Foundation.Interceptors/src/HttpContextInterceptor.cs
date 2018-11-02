@@ -3,8 +3,7 @@ using CorrelationId;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
-
-namespace Common.Foundation.Interceptors.src
+namespace Common.Foundation.Interceptors
 {
     public class HttpContextInterceptor : IInterceptor
     {

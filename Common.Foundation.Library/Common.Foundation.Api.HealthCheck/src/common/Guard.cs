@@ -4,54 +4,57 @@
 using System;
 using System.Collections.Generic;
 
-static class Guard
+namespace Common.Foundation.Api.HealthCheck.common
 {
-    public static void ArgumentNotNull(string argumentName, object value)
+    static class Guard
     {
-        if (value == null)
+        public static void ArgumentNotNull(string argumentName, object value)
         {
-            throw new ArgumentNullException(argumentName);
+            if (value == null)
+            {
+                throw new ArgumentNullException(argumentName);
+            }
         }
-    }
 
-    public static void ArgumentNotNullOrEmpty(string argumentName, string value)
-    {
-        if (value == null)
+        public static void ArgumentNotNullOrEmpty(string argumentName, string value)
         {
-            throw new ArgumentNullException(argumentName);
+            if (value == null)
+            {
+                throw new ArgumentNullException(argumentName);
+            }
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new ArgumentException("Value cannot be an empty string.", argumentName);
+            }
         }
-        if (string.IsNullOrEmpty(value))
-        {
-            throw new ArgumentException("Value cannot be an empty string.", argumentName);
-        }
-    }
 
-    // Use IReadOnlyCollection<T> instead of IEnumerable<T> to discourage double enumeration
-    public static void ArgumentNotNullOrEmpty<T>(string argumentName, IReadOnlyCollection<T> items)
-    {
-        if (items == null)
+        // Use IReadOnlyCollection<T> instead of IEnumerable<T> to discourage double enumeration
+        public static void ArgumentNotNullOrEmpty<T>(string argumentName, IReadOnlyCollection<T> items)
         {
-            throw new ArgumentNullException(argumentName);
+            if (items == null)
+            {
+                throw new ArgumentNullException(argumentName);
+            }
+            if (items.Count == 0)
+            {
+                throw new ArgumentException("Collection must contain at least one item.", argumentName);
+            }
         }
-        if (items.Count == 0)
-        {
-            throw new ArgumentException("Collection must contain at least one item.", argumentName);
-        }
-    }
 
-    public static void ArgumentValid(bool valid, string argumentName, string exceptionMessage)
-    {
-        if (!valid)
+        public static void ArgumentValid(bool valid, string argumentName, string exceptionMessage)
         {
-            throw new ArgumentException(exceptionMessage, argumentName);
+            if (!valid)
+            {
+                throw new ArgumentException(exceptionMessage, argumentName);
+            }
         }
-    }
 
-    public static void OperationValid(bool valid, string exceptionMessage)
-    {
-        if (!valid)
+        public static void OperationValid(bool valid, string exceptionMessage)
         {
-            throw new InvalidOperationException(exceptionMessage);
+            if (!valid)
+            {
+                throw new InvalidOperationException(exceptionMessage);
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Common.Foundation.ExceptionHandling
+namespace Common.Foundation.ExceptionHandling.Exceptions
 {
     public class InternalServerErrorApiException<T> : DomainApiResultException<T> where T : class
     {

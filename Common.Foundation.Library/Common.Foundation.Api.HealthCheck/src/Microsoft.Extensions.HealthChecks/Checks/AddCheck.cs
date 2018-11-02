@@ -4,8 +4,9 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Common.Foundation.Api.HealthCheck.common;
 
-namespace Microsoft.Extensions.HealthChecks
+namespace Common.Foundation.Api.HealthCheck.Microsoft.Extensions.HealthChecks.Checks
 {
     public static partial class HealthCheckBuilderExtensions
     {

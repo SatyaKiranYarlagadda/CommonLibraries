@@ -5,7 +5,6 @@ using Autofac;
 using Castle.DynamicProxy;
 using CorrelationId;
 using FluentValidation;
-using Common.Foundation.Interceptors.src;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;

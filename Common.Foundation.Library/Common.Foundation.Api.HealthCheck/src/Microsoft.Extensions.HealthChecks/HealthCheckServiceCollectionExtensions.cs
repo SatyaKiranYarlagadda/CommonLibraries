@@ -3,9 +3,10 @@
 
 using System;
 using System.Linq;
-using Microsoft.Extensions.HealthChecks;
+using Common.Foundation.Api.HealthCheck.common;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace Common.Foundation.Api.HealthCheck.Microsoft.Extensions.HealthChecks
 {
     public static class HealthCheckServiceCollectionExtensions
     {

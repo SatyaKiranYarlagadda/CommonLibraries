@@ -2,9 +2,10 @@
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using Microsoft.Extensions.HealthChecks;
+using Common.Foundation.Api.HealthCheck.Microsoft.Extensions.HealthChecks;
+using Microsoft.AspNetCore.Hosting;
 
-namespace Microsoft.AspNetCore.Hosting
+namespace Common.Foundation.Api.HealthCheck.Microsoft.AspNetCore.HealthChecks
 {
     public static class HealthCheckWebHostExtensions
     {

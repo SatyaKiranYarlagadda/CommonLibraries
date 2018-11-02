@@ -4,9 +4,10 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Microsoft.Extensions.HealthChecks.Internal;
+using Common.Foundation.Api.HealthCheck.common;
+using Common.Foundation.Api.HealthCheck.Microsoft.Extensions.HealthChecks.Internal;
 
-namespace Microsoft.Extensions.HealthChecks
+namespace Common.Foundation.Api.HealthCheck.Microsoft.Extensions.HealthChecks.Checks
 {
     public static partial class HealthCheckBuilderExtensions
     {
