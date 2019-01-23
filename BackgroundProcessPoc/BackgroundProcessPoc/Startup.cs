@@ -37,6 +37,7 @@ namespace BackgroundProcessPoc
                 s.DescribeAllEnumsAsStrings();
             });
 
+            services.Configure<BackgroundProcessConfig>(Configuration.GetSection("BackgroundProcessConfig"));
             services.AddTransient<IDataService, DataService>();
             services.AddDbContext<BackgroundTasksContext>(options => options.UseSqlServer(Configuration.GetConnectionString("BackgroundTaskDatabase")));
 
@@ -45,7 +46,7 @@ namespace BackgroundProcessPoc
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider, IOptions<BackgroundProcessConfig> backgroundProcessConfig)
         {
             if (env.IsDevelopment())
             {
@@ -59,9 +60,14 @@ namespace BackgroundProcessPoc
             app.UseSwagger();
             app.UseSwaggerUI(u => { u.SwaggerEndpoint("../swagger/v1/swagger.json", "BackgroundProcessPoc"); });
 
-            GlobalConfiguration.Configuration.UseActivator(new BackgroundJobActivator(serviceProvider));
-
-            app.UseHangfireServer();
+            var backgroundConfig = backgroundProcessConfig.Value;
+            app.UseHangfireServer(new BackgroundJobServerOptions
+            { 
+                Queues = new [] { backgroundConfig.Queue },
+                SchedulePollingInterval = new TimeSpan(0, 0, backgroundConfig.PollingIntervalInSeconds),
+                WorkerCount = backgroundConfig.WorkerCount,
+                Activator = new BackgroundJobActivator(serviceProvider)
+            });
             app.UseHangfireDashboard("/backgroundJobs");
             app.UseHttpsRedirection();
             app.UseMvc();

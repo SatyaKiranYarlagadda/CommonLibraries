@@ -4,7 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using BackgroundServices;
 using Hangfire;
+using Hangfire.Storage;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 
 namespace BackgroundProcessPoc.Controllers
 {
@@ -13,22 +16,42 @@ namespace BackgroundProcessPoc.Controllers
     public class BackgroundJobsController : ControllerBase
     {
         private readonly IDataService _dataService;
+        private readonly BackgroundProcessConfig _backgroundProcessConfig;
 
-        public BackgroundJobsController(IDataService dataService)
+        public BackgroundJobsController(IDataService dataService, IOptions<BackgroundProcessConfig> backgroundProcessConfig)
         {
             _dataService = dataService;
+            _backgroundProcessConfig = backgroundProcessConfig.Value;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            using (var connection = JobStorage.Current.GetConnection())
+            {
+                var recurringJobs = connection.GetRecurringJobs();
+                return Ok(recurringJobs.Select(x => x.Id));
+            }
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet("{jobId}")]
+        public ActionResult<string> Get(string jobId)
         {
-            return "value";
+            using (var connection = JobStorage.Current.GetConnection())
+            {
+                var job = connection.GetRecurringJobs().FirstOrDefault(x => x.Id == jobId);
+                return Ok(JsonConvert.SerializeObject(new
+                {
+                    JobId = job.Id,
+                    Queue = job.Queue,
+                    Schedule = job.Cron,
+                    CreatedAt = job.CreatedAt,
+                    LastExecuted = job.LastExecution,
+                    LastJobId = job.LastJobId,
+                    LastJobState = job.LastJobState,
+                    NextExecution = job.NextExecution
+                }));
+            }
         }
 
         [HttpPost]
@@ -38,8 +61,8 @@ namespace BackgroundProcessPoc.Controllers
 
             BackgroundJob.Enqueue<TestService>(x => x.DoTask());
 
-            RecurringJob.AddOrUpdate(request.JobId, () => new TestService().DoTask(), Cron.MinuteInterval(2));
-            RecurringJob.AddOrUpdate<IDataService>(request.JobId + "_1", x => x.AddData() , Cron.Minutely);
+            RecurringJob.AddOrUpdate(request.JobId, () => new TestService().DoTask(), Cron.MinuteInterval(2), queue:_backgroundProcessConfig.Queue);
+            RecurringJob.AddOrUpdate<IDataService>(request.JobId + "_1", x => x.AddData() , Cron.Minutely, queue: _backgroundProcessConfig.Queue);
         }
 
         [HttpPost("trigger/{jobId}")]
