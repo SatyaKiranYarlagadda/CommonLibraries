@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>idp_api.Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="Logs\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="Logs\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="HealthChecks\" />
+    <Folder Include="Validators\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.2" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.4.0" />
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="CorrelationId" Version="2.1.0" />
+    <PackageReference Include="Destructurama.Attributed" Version="2.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.3.0" />
+    <PackageReference Include="HCF.Claims.Common.Utils" Version="1.1.9" />
+    <PackageReference Include="HCF.Common.Foundation.Api.Behaviors" Version="1.0.12" />
+    <PackageReference Include="HCF.Common.Foundation.Api.GlobalFilters" Version="1.0.12" />
+    <PackageReference Include="HCF.Common.Foundation.Api.HealthCheck" Version="1.0.4" />
+    <PackageReference Include="HCF.Common.Foundation.Api.Http" Version="1.0.4" />
+    <PackageReference Include="HCF.Common.Foundation.Api.Logging" Version="1.0.9" />
+    <PackageReference Include="HCF.Common.Foundation.Caching" Version="1.0.7" />
+    <PackageReference Include="HCF.Common.Foundation.CQRSExtensions" Version="1.0.3" />
+    <PackageReference Include="HCF.Common.Foundation.ExceptionHandling" Version="1.0.5" />
+    <PackageReference Include="HCF.Common.Foundation.FaultTolerance" Version="1.0.4" />
+    <PackageReference Include="HCF.Common.Foundation.ResponseObjects" Version="1.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
+    <PackageReference Include="Serilog.Sinks.Seq" Version="4.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Api.Models\idp-api.Api.Models.csproj" />
+    <ProjectReference Include="..\Domain\idp-api.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

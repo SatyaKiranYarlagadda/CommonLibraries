@@ -1,0 +1,22 @@
+<ul>
+    <li>
+      <input type="button" (click)="login($event)" value="login">
+      <input type="button" (click)="logoff($event)" value="log-off">    
+    </li>
+    <li>
+      <input type="button" [ngClass]= "{disabled: disableHospital}" [disabled]="disableHospital" (click)="echo('hospital clicked')" value="hospital">
+      <input type="button" (click)="pingHos($event)" value="ping-hospital">
+    </li>
+    <li>
+      <input type="button" [ngClass]= "{disabled: disableMedical}" [disabled]="disableMedical" (click)="echo('medical clicked')" value="medical">
+      <input type="button" (click)="pingMed($event)" value="ping-medical">
+    </li>
+    <li>
+      <input type="button" [ngClass]= "{disabled: disableAncillary}" [disabled]="disableAncillary" (click)="echo('ancillary clicked')" value="ancillary">
+      <input type="button" (click)="pingAnc($event)" value="ping-ancillary">
+    </li>
+    <li><input type="button" (click)="clearEvents($event)" value="clear-logs"></li>
+  </ul>
+  <ul>
+    <li *ngFor="let evt of events; index as i">{{evt}}</li>
+  </ul>
